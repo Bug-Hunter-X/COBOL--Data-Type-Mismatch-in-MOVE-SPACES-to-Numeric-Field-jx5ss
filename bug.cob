@@ -1,0 +1,3 @@
+MOVE SPACES TO WS-DATA.
+
+* This statement initializes the variable WS-DATA to spaces.  However, if WS-DATA is defined as a numeric field, this will cause a data type mismatch and potentially lead to unpredictable results.  The compiler might not flag this as an error, depending on the compiler's level of strictness, leading to a subtle bug.  The program might appear to work fine until it is used with certain data, leading to unexpected behaviour.
